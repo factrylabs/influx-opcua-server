@@ -49,7 +49,7 @@ Some settings for running the OPCUA server:
 
 
 ### influx
-
+The connection details for influxDB:
 
 * **protocol**: http or https, defaults to http
 * **host**: defaults to localhost
@@ -58,8 +58,12 @@ Some settings for running the OPCUA server:
 * **pass**: ..
 * **database**: ..
 
-### 
+### measurementsToExpose
+An array of measurents to expose on the OPCUA server. 
 
+* **name**: the name of the measurement
+* **database**: (optional) the database, if different from the default.
+     
 ## Contributing
 
 1. Fork it!
