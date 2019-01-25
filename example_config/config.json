@@ -1,0 +1,21 @@
+{
+  "opcua": {
+    "port": 7000,
+    "user": "jeroen",
+    "pass": "jero3n"
+  },
+  "influx": {
+    "protocol": "https",
+    "host": "localhost",
+    "port": 8086,
+    "user": "someone",
+    "pass": "something",
+    "database": "testdata"
+  },
+  "measurementsToExpose": [
+    {
+      "database": "testdata",
+      "name": "uatest"
+    }
+  ]
+}

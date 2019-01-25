@@ -1,0 +1,33 @@
+{
+  "name": "influx-opcua-server",
+  "version": "0.1.0",
+  "description": "A simple server for exposing data inside InfluxDB over OPCUA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factrylabs/influx-opcua-server.git"
+  },
+  "keywords": [
+    "opcua",
+    "influxdb"
+  ],
+  "author": "Jeroen Coussement <coussej@factry.io> (https://www.factry.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/factrylabs/influx-opcua-server/issues"
+  },
+  "homepage": "https://github.com/factrylabs/influx-opcua-server#readme",
+  "devDependencies": {
+    "pkg": "^4.3.5",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "ajv": "^6.7.0",
+    "bluebird": "^3.5.3",
+    "influx": "^5.0.7",
+    "node-opcua": "^0.5.6"
+  }
+}

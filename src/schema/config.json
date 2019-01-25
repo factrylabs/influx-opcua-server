@@ -1,0 +1,91 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://factry.io/influx-opcua-server/config.json",
+  "type": "object",
+  "properties": {
+    "properties": {
+      "port": {
+        "$id": "#/properties/opcua/properties/port",
+        "type": "integer"
+      },
+      "user": {
+        "$id": "#/properties/opcua/properties/user",
+        "type": "string",
+        "pattern": "^(.*)$"
+      },
+      "pass": {
+        "$id": "#/properties/opcua/properties/pass",
+        "type": "string",
+        "pattern": "^(.*)$"
+      }
+    },
+    "influx": {
+      "$id": "#/properties/influx",
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "$id": "#/properties/influx/properties/protocol",
+          "type": "string",
+          "enum": [
+            "http",
+            "https"
+          ],
+          "default": "http",
+          "pattern": "^(.*)$"
+        },
+        "host": {
+          "$id": "#/properties/influx/properties/host",
+          "type": "string",
+          "pattern": "^(.*)$"
+        },
+        "port": {
+          "$id": "#/properties/influx/properties/port",
+          "type": "integer"
+        },
+        "user": {
+          "$id": "#/properties/influx/properties/user",
+          "type": "string",
+          "pattern": "^(.*)$"
+        },
+        "pass": {
+          "$id": "#/properties/influx/properties/pass",
+          "type": "string",
+          "pattern": "^(.*)$"
+        },
+        "database": {
+          "$id": "#/properties/influx/properties/database",
+          "type": "string",
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "measurementsToExpose": {
+      "$id": "#/properties/measurementsToExpose",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/measurementsToExpose/items",
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "database": {
+            "$id": "#/properties/measurementsToExpose/items/properties/database",
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/measurementsToExpose/items/properties/name",
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "influx",
+    "measurementsToExpose"
+  ]
+}
