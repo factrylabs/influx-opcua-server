@@ -53,7 +53,7 @@ class InfluxDB {
    * specific field from a series.
    */
   async getLastValueForField (series, field) {
-    let q = `SELECT last(${field}) AS value FROM ${series.measurement} WHERE ${series.getWhereClause()}`
+    let q = `SELECT last(${field}) AS value FROM ${series.measurement} WHERE ${series.getWhereClause()} AND time <= now()`
     let res = await this.influx.query(q, { database: series.database })
 
     return res[0]
